@@ -1,9 +1,22 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vertical_landing_page/providers/page_provider.dart';
 import 'package:vertical_landing_page/router/router.dart';
 
-void main() => runApp(AppState());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+        apiKey: "AIzaSyCaMzD3X0vUipYys4cFB4P5S0tNHDNjG5g",
+        authDomain: "private-81af4.firebaseapp.com",
+        projectId: "private-81af4",
+        storageBucket: "private-81af4.appspot.com",
+        messagingSenderId: "752405290763",
+        appId: "1:752405290763:web:ce1e2a08656e5310cb4c0e"),
+  );
+  runApp(AppState());
+}
 
 class AppState extends StatelessWidget {
   @override

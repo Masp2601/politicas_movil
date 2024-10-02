@@ -1,6 +1,6 @@
 {
-    "name": "vertical_landing_page",
-    "short_name": "vertical_landing_page",
+    "name": "politicas_privacidad",
+    "short_name": "politicas_privacidad",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
