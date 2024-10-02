@@ -11,7 +11,6 @@ import 'package:vertical_landing_page/ui/views/location_view.dart';
 import 'package:vertical_landing_page/ui/views/home_view.dart';
 import 'package:vertical_landing_page/ui/views/pricing_view.dart';
 
-
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,15 +19,8 @@ class HomePage extends StatelessWidget {
         decoration: buildBoxDecoration(),
         child: Stack(
           children: [
-
             _HomeBody(),
-
-            Positioned(
-              right: 20,
-              top: 20,
-              child: CustomAppMenu()
-            ),
-
+            Positioned(right: 20, top: 20, child: CustomAppMenu()),
           ],
         ),
       ),
@@ -36,24 +28,16 @@ class HomePage extends StatelessWidget {
   }
 
   BoxDecoration buildBoxDecoration() => BoxDecoration(
-    gradient: LinearGradient(
-      colors: [
-        Colors.pink,
-        Colors.purpleAccent
-      ],
-      begin: Alignment.topCenter,
-      end: Alignment.bottomCenter,
-      stops: [ 0.5, 0.5 ]
-    )
-  );
+      gradient: LinearGradient(
+          colors: [Colors.pink, Colors.purpleAccent],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          stops: [0.5, 0.5]));
 }
 
-
 class _HomeBody extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
-
     final pageProvider = Provider.of<PageProvider>(context, listen: false);
 
     return PageView(
@@ -61,10 +45,10 @@ class _HomeBody extends StatelessWidget {
       scrollDirection: Axis.vertical,
       children: [
         HomeView(),
-        AboutView(),
-        PricingView(),
-        ContactView(),
-        LocationView(),
+        //AboutView(),
+        //PricingView(),
+        //ContactView(),
+        //LocationView(),
       ],
     );
   }

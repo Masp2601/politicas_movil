@@ -14,3 +14,11 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+# Comandos quitar origin 
+git remote rm origin
+Con este comando habrás eliminado el repositorio remoto llamado "origin" que es el que tienes asociado en GitHub o cuando usas cualquier otro hosting de repositorios Git.
+
+Para verificar qué origin tienes en un momento dado en tu repositorio escribes este comando.
+
+git remote -v
