@@ -1,5 +1,10 @@
 {
   "dependencies": {
     "firebase": "^10.14.0"
+  },
+  "scripts": {
+    "start": "flutter run",
+    "test": "flutter test",
+    "build": "flutter build web"
   }
 }
