@@ -5,6 +5,6 @@
   "scripts": {
     "start": "flutter run",
     "test": "flutter test",
-    "build": "flutter build web"
+    "build": ""
   }
 }
