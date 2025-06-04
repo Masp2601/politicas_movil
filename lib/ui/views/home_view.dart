@@ -4,72 +4,103 @@ import 'package:google_fonts/google_fonts.dart';
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            child: Container(
-              color: Colors.white,
-              child: Center(
-                child: FittedBox(
-                  fit: BoxFit.contain,
-                  child: Text(
-                    'POLÍTICA DE PRIVACIDAD PARA APLICACIONES MÓVILES',
-                    style: GoogleFonts.montserratAlternates(
-                      fontSize: screenHeight *
-                          0.8, // Ajusta el tamaño según la altura de la pantalla
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        automaticallyImplyLeading: false, // Oculta la flecha
+        backgroundColor: Colors.pink,
+        centerTitle: true,
+        title: Text(
+          'Política de Privacidad',
+          style: GoogleFonts.montserratAlternates(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'POLÍTICA DE PRIVACIDAD PARA APLICACIONES MÓVILES',
+              style: GoogleFonts.montserratAlternates(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
             ),
-          ),
-          Expanded(
-            child: Container(
-              color: Colors.white,
-              child: Center(
-                child: FittedBox(
-                  fit: BoxFit.contain,
-                  child: Text(
-                    'FINALIDAD DEL TRATAMIENTO DE DATOS',
-                    style: GoogleFonts.montserratAlternates(
-                      fontSize: screenHeight *
-                          0.06, // Ajusta el tamaño según la altura de la pantalla
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
+            const SizedBox(height: 20),
+            Text(
+              'FINALIDAD DEL TRATAMIENTO DE DATOS',
+              style: GoogleFonts.montserratAlternates(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
             ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(6.0),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Text(
-                      'La recogida, almacenamiento, modificación, estructuración y en su caso, eliminación, de los datos proporcionados por los Usuarios, constituirán operaciones de tratamiento llevadas a cabo por el Responsable, con la finalidad de garantizar el correcto funcionamiento de la Aplicación, mantener la relación de prestación de servicios y/o comercial con el Usuario, y para la gestión, administración, información, prestación y mejora del servicio.',
-                      style: TextStyle(
-                          fontSize: screenWidth *
-                              0.01), // Ajusta el tamaño según el ancho de la pantalla
-                    ),
-                    Text(
-                      'Los datos personales facilitados por el Usuario -especialmente, el correo electrónico o e-mail- podrán emplearse también para remitir boletines (newsletters), así como comunicaciones comerciales de promociones y/o publicidad de la Aplicación, siempre y cuando, el Usuario haya prestado previamente su consentimiento expreso para la recepción de estas comunicaciones vía electrónica.',
-                      style: TextStyle(
-                          fontSize: screenWidth *
-                              0.01), // Ajusta el tamaño según el ancho de la pantalla
-                    ),
-                  ],
-                ),
+            const SizedBox(height: 10),
+            Text(
+              '''La recogida, almacenamiento, modificación, estructuración y, en su caso, eliminación de los datos proporcionados por los usuarios constituirán operaciones de tratamiento llevadas a cabo por el responsable, con la finalidad de garantizar el correcto funcionamiento de la aplicación, mantener la relación de prestación de servicios y/o comercial según corresponda.''',
+              style: GoogleFonts.montserratAlternates(fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+            const SizedBox(height: 20),
+            Text(
+              'USO DE SERVICIOS COMO FIREBASE',
+              style: GoogleFonts.montserratAlternates(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
             ),
-          ),
-        ],
+            const SizedBox(height: 10),
+            Text(
+              '''La aplicación puede hacer uso de servicios como Firebase Authentication, Firestore, Firebase Messaging, entre otros, para proporcionar funcionalidades esenciales. Firebase puede recopilar información como el ID del dispositivo, estadísticas de uso anónimas y datos técnicos de conexión. Para más información, consulta la política de privacidad de Firebase: https://firebase.google.com/support/privacy''',
+              style: GoogleFonts.montserratAlternates(fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+            const SizedBox(height: 20),
+            Text(
+              'ELIMINACIÓN DE DATOS',
+              style: GoogleFonts.montserratAlternates(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              '''Si deseas eliminar tus datos, puedes enviar una solicitud al correo electrónico del desarrollador. Tus datos serán eliminados de la base de datos en el menor tiempo posible.''',
+              style: GoogleFonts.montserratAlternates(fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+            const SizedBox(height: 20),
+            Text(
+              'USUARIOS MENORES DE 13 AÑOS',
+              style: GoogleFonts.montserratAlternates(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              '''La aplicación puede ser utilizada por menores de edad bajo la supervisión de un adulto. No se recopilan intencionadamente datos de menores sin consentimiento verificable.''',
+              style: GoogleFonts.montserratAlternates(fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+            const SizedBox(height: 20),
+            Text(
+              'CONTACTO',
+              style: GoogleFonts.montserratAlternates(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              'Si tienes preguntas sobre esta política o deseas ejercer tus derechos de acceso o eliminación de datos, escríbenos a: masp2601@gmail.com',
+              style: GoogleFonts.montserratAlternates(fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+          ],
+        ),
       ),
     );
   }

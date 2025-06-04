@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
         child: Stack(
           children: [
             _HomeBody(),
-            Positioned(right: 20, top: 20, child: CustomAppMenu()),
+            //Positioned(right: 20, top: 20, child: CustomAppMenu()),
           ],
         ),
       ),
